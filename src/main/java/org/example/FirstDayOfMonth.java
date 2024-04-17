@@ -1,9 +1,13 @@
 package org.example;
 public class FirstDayOfMonth {
-    GetDateTime sysClock;
+    ISystemClock sysClock;
 
     public FirstDayOfMonth() {
         this.sysClock = new GetDateTime();
+    }
+
+    public FirstDayOfMonth(ISystemClock injSystemClock) {
+        this.sysClock = injSystemClock;
     }
 
     public boolean todayIsFirstDayOfMonth() {
